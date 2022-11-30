@@ -96,7 +96,6 @@ def train():
     net = ssd_net
 
     if args.cuda:
-        net = torch.nn.DataParallel(ssd_net)
         cudnn.benchmark = True
 
     if args.resume:
